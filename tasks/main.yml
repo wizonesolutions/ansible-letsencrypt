@@ -24,6 +24,7 @@
     -d {{ acme_sh_secondary_domains|join(" -d ") }}
     {% endif %}
     {{ acme_sh_issue_suffix }}
+    {{ acme_sh_staging | ternary('--staging', '') }}
   args:
     creates: '{{ acme_sh_home }}/{{ acme_sh_primary_domain }}/{{ acme_sh_primary_domain }}.cer'
   when: acme_sh_primary_domain != ''

@@ -34,8 +34,12 @@ acme_sh_secondary_domains: []
 
 # Arguments to include before the domain arguments when issuing a certificate. The typical use for
 # this is to pass --nginx or --apache when you want acme.sh to automatically perform the http-01
-# challenge. If you aren't using either of those, set this to blank to use live mode.
-acme_sh_issue_prefix: '--staging'
+# challenge.
+acme_sh_issue_prefix: ''
+
+# When true, causes acme.sh to use the letsencrypt staging servers (passes the --staging flag)
+# Set to false to use live servers.
+acme_sh_staging: true
 
 # REQUIRED TO ISSUE CERTIFICATE: Specify additional arguments to issue the certificate. This is
 # normally the challenge type: for example, -w, --dns, etc. See

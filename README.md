@@ -24,8 +24,8 @@ Role Variables
 --------------
 
 See `defaults/main.yml`. It is important to read the notes on how to configure the role. Namely,
-you will want to ensure that `acme_sh_env` is changed from the default value (which points to the
-ACME staging server), at least when you want to generate real SSL certificates.
+you will want to ensure that `acme_sh_staging` is changed from the default value to use the
+non-staging Let's Encrypt endpoint when you want to generate production certificates.
 
 Dependencies
 ------------
